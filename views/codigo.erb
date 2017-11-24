@@ -1,0 +1,16 @@
+ <!-- <%@num=0%>
+   <%loop do%>
+     <%@num+=1%>
+       <%if @num%2==0%>
+         <h2><%=@num%> Soy Par!</h2>
+       <%else%>
+         <h2><%=@num%> Soy Impar!</h2>
+       <%end%>
+     <%break if @num>=50%>
+   <%end%> -->
+
+
+ <%(1...50).each do |num|%>
+  <h2><%="#{num} soy par" if num.even?%></h2>
+  <h2><%="#{num} soy impar"if num.odd?%></h2>
+<%end%>
